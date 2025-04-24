@@ -1,25 +1,36 @@
+
+using Api_Aggregator.Application;
+using Api_Aggregator.Infrastructure.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// bind options
+builder.Services.AddMemoryCache();
+builder.Services.Configure<WeatherApiOptions>(
+    builder.Configuration.GetSection("WeatherApi"));
+builder.Services.Configure<NewsApiOptions>(
+    builder.Configuration.GetSection("NewsApi"));
 
+ builder.Services.AddInfrastructure(builder.Configuration);
+
+// application & Mediatr
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(Marker).Assembly);
+});
+
+// controllers, swagger, etc.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
+app.UseExceptionHandler("/error"); // or custom middleware
 app.MapControllers();
-
 app.Run();
