@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Agile_Aggregator.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a33abbf5e60056b2b0e30acc4c73c74ee54b91de")]
 [assembly: System.Reflection.AssemblyProductAttribute("Agile_Aggregator.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Agile_Aggregator.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

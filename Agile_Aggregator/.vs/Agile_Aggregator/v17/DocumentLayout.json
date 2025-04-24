@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\valueobjects\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\valueobjects\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\valueobjects\\githubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\valueobjects\\githubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\valueobjects\\newsarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\valueobjects\\newsarticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\aggregates\\aggregatedinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\aggregates\\aggregatedinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherReport.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:34:24.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GithubRepository.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
+              "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:34:14.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NewsArticle.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
+              "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:33:56.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AggregatedInfo.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
+              "RelativeToolTip": "Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:22:18.224Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
