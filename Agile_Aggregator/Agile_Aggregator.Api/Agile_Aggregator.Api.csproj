@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Agile_Aggregator.Application\Agile_Aggregator.Application.csproj" />
+    <ProjectReference Include="..\Agile_Aggregator.Domain\Agile_Aggregator.Domain.csproj" />
+    <ProjectReference Include="..\Agile_Aggregator.Infrastructure\Agile_Aggregator.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
