@@ -13,9 +13,21 @@ public class AggregatorController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> Get(CancellationToken ct)
+    public async Task<IActionResult> Get(
+        [FromQuery] string? newsKeyword,
+        [FromQuery] bool sortByStars = false,
+        [FromQuery] bool includeWeather = true,
+        CancellationToken ct = default)
     {
-        var result = await _handler.HandleAsync(ct);
-        return Ok(result);
+        var query = new GetAggregatedInfoQuery
+        {
+            NewsKeyword = newsKeyword,
+            SortByStars = sortByStars,
+            IncludeWeather = includeWeather
+        };
+
+        var data = await _handler.HandleAsync(query, ct);
+        return Ok(data);
     }
+
 }

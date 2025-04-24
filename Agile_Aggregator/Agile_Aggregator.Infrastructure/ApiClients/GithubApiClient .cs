@@ -25,7 +25,8 @@ namespace Agile_Aggregator.Infrastructure.ApiClients
             {
                 var name = e.GetProperty("name").GetString()!;
                 var url = e.GetProperty("html_url").GetString()!;
-                list.Add(new GithubRepository(name, url));
+                var stars = e.GetProperty("stargazers_count").GetInt32();
+                list.Add(new GithubRepository(name, url,stars));
             }
             return list;
         }
