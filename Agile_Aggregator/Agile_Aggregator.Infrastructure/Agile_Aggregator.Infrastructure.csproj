@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Agile_Aggregator.Application\Agile_Aggregator.Application.csproj" />
     <ProjectReference Include="..\Agile_Aggregator.Domain\Agile_Aggregator.Domain.csproj" />
   </ItemGroup>

@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\apiclients\\newsapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\apiclients\\newsapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\apiclients\\githubapiclient .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\apiclients\\githubapiclient .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\apiclients\\weatherapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\apiclients\\weatherapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.api\\controllers\\aggregatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|solutionrelative:agile_aggregator.api\\controllers\\aggregatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.api\\agile_aggregator.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|solutionrelative:agile_aggregator.api\\agile_aggregator.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|solutionrelative:agile_aggregator.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\fetchers\\aggregateddatafetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\fetchers\\aggregateddatafetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.application\\usecases\\getaggregatedinfoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|solutionrelative:agile_aggregator.application\\usecases\\getaggregatedinfoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\valueobjects\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\valueobjects\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|solutionrelative:agile_aggregator.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.application\\usecases\\getaggregatedinfoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|solutionrelative:agile_aggregator.application\\usecases\\getaggregatedinfoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.application\\agile_aggregator.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|solutionrelative:agile_aggregator.application\\agile_aggregator.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\configuration\\apioptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\configuration\\apioptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.api\\agile_aggregator.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F7F56B86-EE47-DB20-665A-5332C581FEE1}|Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj|solutionrelative:agile_aggregator.api\\agile_aggregator.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\agile_aggregator.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -27,27 +59,7 @@
       "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\agile_aggregator.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.application\\agile_aggregator.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|solutionrelative:agile_aggregator.application\\agile_aggregator.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\fetchers\\aggregateddatafetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\fetchers\\aggregateddatafetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\apiclients\\githubapiclient .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\apiclients\\githubapiclient .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\apiclients\\newsapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\apiclients\\newsapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.infrastructure\\apiclients\\weatherapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C6C156F-F035-979F-5926-F43697B91B9D}|Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj|solutionrelative:agile_aggregator.infrastructure\\apiclients\\weatherapiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A64311B-F54C-352B-5E07-67FBD3CD0D26}|Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.application\\interfaces\\iaggregateddatafetcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,10 +82,6 @@
       "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\policies\\iaggregationpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\valueobjects\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\valueobjects\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|c:\\users\\xristos\\documents\\github\\agile_aggregator\\agile_aggregator\\agile_aggregator.domain\\valueobjects\\githubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{914617F5-8C05-6D57-C63C-3CD70BCE2C45}|Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj|solutionrelative:agile_aggregator.domain\\valueobjects\\githubrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -93,60 +101,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AggregatorController.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
-              "RelativeToolTip": "Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "AggregatedDataFetcher.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
+              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBoAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:50:17.726Z",
+              "WhenOpened": "2025-04-24T18:45:59.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Agile_Aggregator.Api.csproj",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
-              "RelativeToolTip": "Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-24T18:48:45.316Z"
+              "DocumentIndex": 2,
+              "Title": "WeatherApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
+              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:44:27.18Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Agile_Aggregator.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj",
               "RelativeToolTip": "Agile_Aggregator.Infrastructure\\Agile_Aggregator.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-24T18:48:36.216Z"
+              "WhenOpened": "2025-04-24T18:48:36.216Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Agile_Aggregator.Domain.csproj",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
-              "RelativeToolTip": "Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-24T18:48:33.193Z"
+              "DocumentIndex": 1,
+              "Title": "GithubApiClient .cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
+              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:45:25.227Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "NewsApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
+              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAQwBkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:45:13.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Agile_Aggregator.Application.csproj",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj",
               "RelativeDocumentMoniker": "Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj",
@@ -154,11 +178,103 @@
               "RelativeToolTip": "Agile_Aggregator.Application\\Agile_Aggregator.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-24T18:48:28.167Z"
+              "WhenOpened": "2025-04-24T18:48:28.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetAggregatedInfoQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
+              "RelativeToolTip": "Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:43:46.513Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "WeatherReport.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:34:24.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\appsettings.json",
+              "RelativeToolTip": "Agile_Aggregator.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-24T19:38:13.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AggregatorController.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
+              "RelativeToolTip": "Agile_Aggregator.Api\\Controllers\\AggregatorController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:50:17.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Program.cs",
+              "RelativeToolTip": "Agile_Aggregator.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T18:46:41.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiOptions.cs",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Configuration\\ApiOptions.cs",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\Configuration\\ApiOptions.cs",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Configuration\\ApiOptions.cs",
+              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\Configuration\\ApiOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T19:42:51.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Agile_Aggregator.Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
+              "RelativeToolTip": "Agile_Aggregator.Domain\\Agile_Aggregator.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-24T18:48:33.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -166,83 +282,25 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-04-24T18:48:10.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Program.cs",
-              "RelativeToolTip": "Agile_Aggregator.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:46:41.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AggregatedDataFetcher.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
-              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\Fetchers\\AggregatedDataFetcher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:45:59.906Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GithubApiClient .cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
-              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\ApiClients\\GithubApiClient .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:45:25.227Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NewsApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
-              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\ApiClients\\NewsApiClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:45:13.697Z"
+              "WhenOpened": "2025-04-24T18:48:10.992Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "WeatherApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
-              "RelativeToolTip": "Agile_Aggregator.Infrastructure\\ApiClients\\WeatherApiClient.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:44:27.18Z"
+              "Title": "Agile_Aggregator.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
+              "RelativeDocumentMoniker": "Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
+              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
+              "RelativeToolTip": "Agile_Aggregator.Api\\Agile_Aggregator.Api.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-24T18:48:45.316Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetAggregatedInfoQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
-              "RelativeToolTip": "Agile_Aggregator.Application\\UseCases\\GetAggregatedInfoQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:43:46.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "IAggregatedDataFetcher.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\Interfaces\\IAggregatedDataFetcher.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Application\\Interfaces\\IAggregatedDataFetcher.cs",
@@ -250,11 +308,12 @@
               "RelativeToolTip": "Agile_Aggregator.Application\\Interfaces\\IAggregatedDataFetcher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:43:19.001Z"
+              "WhenOpened": "2025-04-24T18:43:19.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "IGithubApiClient.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\Interfaces\\IGithubApiClient.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Application\\Interfaces\\IGithubApiClient.cs",
@@ -262,11 +321,12 @@
               "RelativeToolTip": "Agile_Aggregator.Application\\Interfaces\\IGithubApiClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:43:00.196Z"
+              "WhenOpened": "2025-04-24T18:43:00.196Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "INewsApiClient.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\Interfaces\\INewsApiClient.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Application\\Interfaces\\INewsApiClient.cs",
@@ -274,11 +334,12 @@
               "RelativeToolTip": "Agile_Aggregator.Application\\Interfaces\\INewsApiClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:42:33.609Z"
+              "WhenOpened": "2025-04-24T18:42:33.609Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "IWeatherApiClient.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Application\\Interfaces\\IWeatherApiClient.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Application\\Interfaces\\IWeatherApiClient.cs",
@@ -286,11 +347,12 @@
               "RelativeToolTip": "Agile_Aggregator.Application\\Interfaces\\IWeatherApiClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:42:18.282Z"
+              "WhenOpened": "2025-04-24T18:42:18.282Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "IAggregationPolicy.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Policies\\IAggregationPolicy.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\Policies\\IAggregationPolicy.cs",
@@ -298,23 +360,12 @@
               "RelativeToolTip": "Agile_Aggregator.Domain\\Policies\\IAggregationPolicy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:37:19.29Z"
+              "WhenOpened": "2025-04-24T18:37:19.29Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "WeatherReport.cs",
-              "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
-              "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
-              "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
-              "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\WeatherReport.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:34:24.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "GithubRepository.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
@@ -322,11 +373,12 @@
               "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\GithubRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:34:14.816Z"
+              "WhenOpened": "2025-04-24T18:34:14.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "NewsArticle.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
@@ -334,19 +386,21 @@
               "RelativeToolTip": "Agile_Aggregator.Domain\\ValueObjects\\NewsArticle.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:33:56.1Z"
+              "WhenOpened": "2025-04-24T18:33:56.1Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "AggregatedInfo.cs",
               "DocumentMoniker": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
               "RelativeDocumentMoniker": "Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
               "ToolTip": "C:\\Users\\xristos\\Documents\\GitHub\\Agile_Aggregator\\Agile_Aggregator\\Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
               "RelativeToolTip": "Agile_Aggregator.Domain\\Aggregates\\AggregatedInfo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T18:22:18.224Z"
+              "WhenOpened": "2025-04-24T18:22:18.224Z",
+              "EditorCaption": ""
             }
           ]
         }
