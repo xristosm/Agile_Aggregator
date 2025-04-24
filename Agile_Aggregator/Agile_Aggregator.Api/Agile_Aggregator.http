@@ -1,0 +1,6 @@
+@Agile_Aggregator_HostAddress = http://localhost:5175
+
+GET {{Agile_Aggregator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
