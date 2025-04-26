@@ -1,45 +1,42 @@
-﻿using Agile_Aggregator.Domain.Interfaces;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Agile_Aggregator.Domain.Models;
-using System.Diagnostics;
 
 namespace Agile_Aggregator.Application.Services
 {
-    public class AggregationService : IAggregationService
+    public class JwtTokenService : IJwtTokenService
     {
-        private readonly IApiClientFactory _factory;
-        private readonly ICacheService _cache;
-        private readonly IStatsService _stats;
-        private static readonly TimeSpan CacheTtl = TimeSpan.FromMinutes(5);
+        private readonly JwtSettings _settings;
+        private readonly SymmetricSecurityKey _key;
 
-        public AggregationService(
-          IApiClientFactory factory,
-            ICacheService cache,
-            IStatsService stats)
+        public JwtTokenService(IOptions<JwtSettings> opts)
         {
-            _factory = factory;
-            _cache = cache;
-            _stats = stats;
+            _settings = opts.Value;
+            _key = new SymmetricSecurityKey(Convert.FromBase64String(_settings.Key));
         }
 
-        public async Task<AggregatedResult> FetchAndAggregateAsync(FilterParams filter)
+        public string CreateToken(string userId, IEnumerable<string> roles)
         {
-
-            var clients = _factory.CreateClients();
-            var tasks = clients.Select(async cl =>
+            var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
+            var claims = new List<Claim>
             {
-                var key = $"{cl.Name}-{filter.From}-{filter.Category}";
-                var sw = Stopwatch.StartNew();
+                new Claim(JwtRegisteredClaimNames.Sub, userId),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim("scope", _settings.Scope)
+            };
+            claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
 
-                var response = await _cache.GetOrAddAsync(key,
-                    () => cl.FetchAsync(filter), CacheTtl);
+            var token = new JwtSecurityToken(
+                issuer: _settings.Issuer,
+                audience: _settings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_settings.ExpireMinutes),
+                signingCredentials: creds);
 
-                sw.Stop();
-                _stats.Record(cl.Name, sw.ElapsedMilliseconds);
-                return response.Data;
-            });
-
-            var results = await Task.WhenAll(tasks);
-            return new AggregatedResult { Items = results.SelectMany(r => r) };
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

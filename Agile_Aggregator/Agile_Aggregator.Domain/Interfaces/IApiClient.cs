@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Agile_Aggregator.Domain.Filtering;
 using Agile_Aggregator.Domain.Models;
 
 namespace Agile_Aggregator.Domain.Interfaces
@@ -6,6 +7,6 @@ namespace Agile_Aggregator.Domain.Interfaces
     public interface IApiClient
     {
         string Name { get; }
-        Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(FilterParams filter);
+        Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(string Query);
     }
 }

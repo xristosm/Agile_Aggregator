@@ -4,6 +4,8 @@ namespace Agile_Aggregator.Domain.Models
 {
     public class AggregatedResult
     {
-        public IEnumerable<JsonElement> Items { get; set; } = Enumerable.Empty<JsonElement>();
+        public Dictionary<string, JsonElement[]> ResultsByApi { get; set; } = new();
     }
+
+
 }

@@ -12,10 +12,10 @@ namespace Agile_Aggregator.Infrastructure.Clients
         public NewsApiClient(HttpClient http, EndpointSettings cfg)
             : base(http, "NewsApi", cfg.ApiKey) { }
 
-        public async Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(FilterParams filter)
+        public async Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(string filter)
         {
 
-            string path;
+          /*  string path;
             // 1️⃣ Decide endpoint & query
             if (!string.IsNullOrWhiteSpace(filter.Query))
             {
@@ -36,12 +36,9 @@ namespace Agile_Aggregator.Infrastructure.Clients
                     parts.Add($"sources={Uri.EscapeDataString(filter.Sources)}");
 
                 path = "top-headlines?" + string.Join("&", parts);
-            }
-            /*            var category = filter.Category ?? "athens";
-                        var uri = $"?q={Uri.EscapeDataString(category)}" +
-                                  $"&appid={ApiKey}" +
-                                  $"&units=metric"; // or imperial*/
-            var wrapper = await GetJsonAsync<NewsResponse>("/v2/"+path);
+            }*/
+                      
+            var wrapper = await GetJsonAsync<NewsResponse>("/v2/"+filter);
             return new ApiResponse<IEnumerable<JsonElement>> { Data = wrapper.Articles, Source = ApiName };
         }
 

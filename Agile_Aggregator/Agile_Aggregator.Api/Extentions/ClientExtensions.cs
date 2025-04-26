@@ -7,7 +7,7 @@ using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Infrastructure.Clients;
 using Microsoft.Extensions.Options;
 
-namespace Agile_Aggregator.Api.Clients
+namespace Agile_Aggregator.Api.Extentions
 {
     public static class HttpClientServiceCollectionExtensions
     {
