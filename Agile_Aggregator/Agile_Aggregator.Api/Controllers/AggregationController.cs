@@ -1,19 +1,23 @@
-using Api_Aggregator.Application.Queries;
-using MediatR;
+using Agile_Aggregator.Domain.Interfaces;
+using Agile_Aggregator.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-[ApiController]
-[Route("aggregate")]
-public class AggregationController : ControllerBase
+namespace Agile_Aggregator.API.Controllers
 {
-    private readonly IMediator _mediator;
-    public AggregationController(IMediator mediator)
-        => _mediator = mediator;
-
-    [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] AggregationRequestDto dto)
+    [ApiController]
+    [Route("api/aggregate")]
+    //[Authorize]
+    public class AggregationController : ControllerBase
     {
-        var result = await _mediator.Send(new AggregateDataQuery(dto));
-        return Ok(result);
+        private readonly IAggregationService _aggregator;
+        public AggregationController(IAggregationService aggregator) => _aggregator = aggregator;
+
+        [HttpGet]
+        public async Task<IActionResult> Get([FromQuery] FilterParams filter)
+        {
+            var result = await _aggregator.FetchAndAggregateAsync(filter);
+            return Ok(result);
+        }
     }
 }

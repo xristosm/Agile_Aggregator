@@ -1,19 +1,16 @@
-using Api_Aggregator.Application.Queries;
-using MediatR;
+using Agile_Aggregator.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-[ApiController]
-[Route("stats")]
-public class StatisticsController : ControllerBase
+namespace Agile_Aggregator.API.Controllers
 {
-    private readonly IMediator _mediator;
-    public StatisticsController(IMediator mediator)
-        => _mediator = mediator;
-
-    [HttpGet]
-    public async Task<IActionResult> Get()
+    [ApiController]
+    [Route("api/stats")]
+    public class StatsController : ControllerBase
     {
-        var stats = await _mediator.Send(new FetchStatisticsQuery());
-        return Ok(stats);
+        private readonly IStatsService _stats;
+        public StatsController(IStatsService stats) => _stats = stats;
+
+        [HttpGet]
+        public IActionResult Get() => Ok(_stats.GetAllStats());
     }
 }

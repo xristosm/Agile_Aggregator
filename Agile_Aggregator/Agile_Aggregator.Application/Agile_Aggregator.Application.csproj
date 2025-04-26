@@ -2,10 +2,12 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Agile_Aggregator.Domain\Agile_Aggregator.Domain.csproj" />
+	  <ProjectReference Include="..\Agile_Aggregator.Domain\Agile_Aggregator.Domain.csproj" />
+	  <ProjectReference Include="..\Agile_Aggregator.Infrastructure\Agile_Aggregator.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
