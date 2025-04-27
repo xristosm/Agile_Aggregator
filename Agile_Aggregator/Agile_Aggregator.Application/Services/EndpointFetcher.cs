@@ -10,28 +10,32 @@ using System.Threading.Tasks;
 using Agile_Aggregator.Domain.Filtering;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
+using Agile_Aggregator.Infrastructure.Stores;
 
 namespace Agile_Aggregator.Application.Services
 {
     public class EndpointFetcher : IEndpointFetcher
     {
 
-            private readonly IHttpClientFactory _httpFactory;
-            private readonly ICacheService _cache;
 
-            private static readonly TimeSpan CacheTtl = TimeSpan.FromMinutes(5);
-            public event EventHandler<ApiFetchEventArgs>? FetchCompleted;
-   
+        private readonly IHttpClientFactory _httpFactory;
+        private readonly ICacheService _cache;
+        private readonly InMemoryStatsStore _store;
+        private static readonly TimeSpan CacheTtl = TimeSpan.FromMinutes(5);
+        public event EventHandler<ApiFetchEventArgs>? FetchCompleted;
+
 
         public EndpointFetcher(
                 IHttpClientFactory httpFactory,
-                ICacheService cache
+                ICacheService cache,
+                InMemoryStatsStore store
              )
-            {
-                _httpFactory = httpFactory;
-                _cache = cache;
-          
-            }
+        {
+            _store = store;
+            _httpFactory = httpFactory;
+            _cache = cache;
+
+        }
         public async Task<Result<JsonElement[]>> FetchWithResultAsync(
     string name,
     EndpointSettings endpointSettings,
@@ -104,69 +108,17 @@ namespace Agile_Aggregator.Application.Services
 
         private void OnFetchCompleted(string apiName, bool fromCache, long elapsedMs)
         {
-            FetchCompleted?.Invoke(this, new ApiFetchEventArgs
-            {
-                ApiName = apiName,
-                FromCache = fromCache,
-                ElapsedMs = elapsedMs
-            });
+            /*            FetchCompleted?.Invoke(this, new ApiFetchEventArgs
+                        {
+                            ApiName = apiName,
+                            FromCache = fromCache,
+                            ElapsedMs = elapsedMs
+                        });*/
+            var key = fromCache ? $"{apiName}.Cache" : $"{apiName}.Live";
+            _store.Add(key, elapsedMs);
         }
 
-        /*   public async Task<Dictionary<string, JsonElement[]>> FetchAsync(
-               string name,
-               EndpointSettings endpointSettings,
-               IReadOnlyCollection<Filter> filters,
-               IReadOnlyCollection<Sort> sorts)
-           {
-               var cacheKey = $"{name}:{endpointSettings.Query}";
-               var stopwatch = Stopwatch.StartNew();
-
-               try
-               {
-                   var element = await _cache.GetOrAddAsync(
-                       cacheKey,
-                       async () =>
-                       {
-                           var response = await _httpFactory
-                               .CreateClient(name)
-                               .GetStringAsync(endpointSettings.Query);
-                           return JsonDocument.Parse(response).RootElement;
-                       },
-                       CacheTtl);
-
-                   JsonElement[] array;
-                   if (element.ValueKind == JsonValueKind.Array)
-                       array = element.EnumerateArray().ToArray();
-                   else if (element.ValueKind == JsonValueKind.Object &&
-                            element.TryGetProperty("items", out var items) &&
-                            items.ValueKind == JsonValueKind.Array)
-                       array = items.EnumerateArray().ToArray();
-                   else
-                       array = new[] { element };
-
-                   return new Dictionary<string, JsonElement[]> { { name, array } };
-               }
-               catch (HttpRequestException)
-               {
-                   _stats.Record(name + ".HttpError", stopwatch.ElapsedMilliseconds);
-                   return new Dictionary<string, JsonElement[]> { { name, Array.Empty<JsonElement>() } };
-               }
-               catch (JsonException)
-               {
-                   _stats.Record(name + ".JsonError", stopwatch.ElapsedMilliseconds);
-                   return new Dictionary<string, JsonElement[]> { { name, Array.Empty<JsonElement>() } };
-               }
-               catch (Exception)
-               {
-                   _stats.Record(name + ".Error", stopwatch.ElapsedMilliseconds);
-                   return new Dictionary<string, JsonElement[]> { { name, Array.Empty<JsonElement>() } };
-               }
-               finally
-               {
-                   stopwatch.Stop();
-                   _stats.Record(name, stopwatch.ElapsedMilliseconds);
-               }
-           }*/
+  
     }
 
 

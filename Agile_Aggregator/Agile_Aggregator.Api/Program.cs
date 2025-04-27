@@ -1,6 +1,7 @@
 
 
 using System.Net.Http.Headers;
+using Agile_Aggregator.Api.BackgroundServices;
 using Agile_Aggregator.Api.Extensions;
 
 using Agile_Aggregator.API.Extensions;
@@ -54,29 +55,21 @@ builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSet
 
 // register core and application
 builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<InMemoryStatsStore>();
+
 builder.Services.AddTransient<ICacheService, CacheService>();
 /*builder.Services.AddTransient<ClientEndpointFetcher>();
 builder.Services.AddTransient<CachingEndpointFetcher>();
 builder.Services.AddTransient<IEndpointFetcherFactory, EndpointFetcherFactory>();*/
-builder.Services.AddTransient<IEndpointFetcher, EndpointFetcher>(); 
-builder.Services.AddSingleton<IStatsService, StatsService>();
+builder.Services.AddScoped<IEndpointFetcher, EndpointFetcher>(); 
+builder.Services.AddScoped<IStatsService, StatsService>();
 builder.Services.AddTransient<IAggregationService, AggregationService>();
 
-// register factory and clients
 
+// register the single BackgroundService
+builder.Services.AddHostedService<PerformanceMonitoringService>();
 
-// 3) Register all named HttpClients from configuration
 builder.Services.AddExternalApis(builder.Configuration);
 
-// 4) Register your factory after HttpClientFactory and named clients are available
-//    IApiClientFactory depends on IHttpClientFactory, so registration order matters
-//builder.Services.AddSingleton<IApiClientFactory, ApiClientFactory>();
-//builder.Services.AddScoped(sp => sp.GetRequiredService<IApiClientFactory>().CreateClients());
-
-
-
-// resilience registry
 builder.Services.AddPolicyRegistry(PolicyRegistryBuilder.Build());
 
 /*// optional JWT
