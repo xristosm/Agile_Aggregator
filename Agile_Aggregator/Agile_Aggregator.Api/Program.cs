@@ -1,7 +1,8 @@
 
 
 using System.Net.Http.Headers;
-using Agile_Aggregator.Api.Extentions;
+using Agile_Aggregator.Api.Extensions;
+
 using Agile_Aggregator.API.Extensions;
 using Agile_Aggregator.Application.Factories;
 using Agile_Aggregator.Application.Services;
@@ -52,16 +53,18 @@ builder.Services.AddSingleton<InMemoryStatsStore>();
 builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"));
 
 // register core and application
-builder.Services.AddScoped<IAggregationService, AggregationService>();
-builder.Services.AddSingleton<IStatsService, StatsService>();
-builder.Services.AddSingleton<ICacheService, CacheService>();
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<InMemoryStatsStore>();
+builder.Services.AddTransient<ICacheService, CacheService>();
 builder.Services.AddSingleton<IEndpointFetcher, EndpointFetcher>();
+builder.Services.AddSingleton<IStatsService, StatsService>();
+builder.Services.AddTransient<IAggregationService, AggregationService>();
 
 // register factory and clients
 
 
 // 3) Register all named HttpClients from configuration
-builder.Services.AddConfiguredHttpClients(builder.Configuration);
+builder.Services.AddExternalApis(builder.Configuration);
 
 // 4) Register your factory after HttpClientFactory and named clients are available
 //    IApiClientFactory depends on IHttpClientFactory, so registration order matters

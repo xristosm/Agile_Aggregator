@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+﻿/*using System.Text.Json;
 using Agile_Aggregator.Domain.Filtering;
 using Agile_Aggregator.Domain.Models;
 
@@ -9,4 +9,4 @@ namespace Agile_Aggregator.Domain.Interfaces
         string Name { get; }
         Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(string Query);
     }
-}
+}*/

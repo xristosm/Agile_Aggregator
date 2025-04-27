@@ -2,7 +2,7 @@
 using System.Text.Json;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
-using Agile_Aggregator.Infrastructure.Clients;
+
 using Microsoft.Extensions.Options;
 
 
@@ -21,9 +21,9 @@ namespace Agile_Aggregator.Application.Factories
             _httpFactory = httpFactory;
         }
 
-        public IEnumerable<IApiClient> CreateClients()
+         /*   public IEnumerable<IApiClient> CreateClients()
         {
-            /*     foreach (var kv in _settings)
+             foreach (var kv in _settings)
                  {
                      var name = kv.Key;
                      var ep = kv.Value;
@@ -39,9 +39,9 @@ namespace Agile_Aggregator.Application.Factories
                      };
 
                      yield return apiClient;
-                 }*/
-            return [];
-        }
+               
+        
+        }  }*/
         public async Task<T> FetchDataAsync<T>(string relativeUri) =>await _httpFactory.CreateClient("MyApi").GetFromJsonAsync<T>(relativeUri);
         
 

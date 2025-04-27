@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+﻿/*using System.Text.Json;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
 using Agile_Aggregator.Infrastructure.Clients;
@@ -15,7 +15,7 @@ namespace Agile_Aggregator.Infrastructure.Clients
         public async Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(string filter)
         {
 
-          /*  string path;
+            string path;
             // 1️⃣ Decide endpoint & query
             if (!string.IsNullOrWhiteSpace(filter.Query))
             {
@@ -36,16 +36,16 @@ namespace Agile_Aggregator.Infrastructure.Clients
                     parts.Add($"sources={Uri.EscapeDataString(filter.Sources)}");
 
                 path = "top-headlines?" + string.Join("&", parts);
-            }*/
-                      
-            var wrapper = await GetJsonAsync<NewsResponse>("/v2/"+filter);
+            }
+
+            var wrapper = await GetJsonAsync<NewsResponse>("/v2/" + filter);
             return new ApiResponse<IEnumerable<JsonElement>> { Data = wrapper.Articles, Source = ApiName };
         }
 
         private record NewsResponse(IEnumerable<JsonElement> Articles);
     }
 }
-/*using Agile_Aggregator.Domain.Models;
+using Agile_Aggregator.Domain.Models;
 using System.Net.Http.Json;
 
 namespace Agile_Aggregator.Infrastructure.Clients
@@ -65,7 +65,7 @@ namespace Agile_Aggregator.Infrastructure.Clients
 
         public async Task<ApiResponse<IEnumerable<object>>> FetchAsync(FilterParams filter)
         {
-            var uri = $"/everything?q={filter.Category??""}&apiKey={_cfg.ApiKey}";
+            var uri = $"/everything?q={filter.Category ?? ""}&apiKey={_cfg.ApiKey}";
             var wrapper = await _http.GetFromJsonAsync<NewsResponse>(uri);
             return new ApiResponse<IEnumerable<object>> { Data = wrapper?.Articles ?? Enumerable.Empty<object>(), Source = Name };
         }

@@ -1,69 +1,42 @@
-﻿using Agile_Aggregator.Domain.Filtering;
-using Agile_Aggregator.Domain.Interfaces;
-using Agile_Aggregator.Domain.Models;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.Extensions.Options;
-using System;
-using System.Diagnostics;
-using System.Net.Http.Json;
-using System.Text.Json;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.IdentityModel.Tokens;
+using Agile_Aggregator.Domain.Models;
 
-public class AggregationService : IAggregationService
+namespace Agile_Aggregator.Application.Services
 {
-    private readonly ApiSettings _settings;
-    private readonly IEndpointFetcher _fetcher;
-
-    public AggregationService(
-        IOptions<ApiSettings> settings,
-        IEndpointFetcher fetcher)
+    public class JwtTokenService : IJwtTokenService
     {
-        _settings = settings.Value;
-        _fetcher = fetcher;
-    }
+        private readonly JwtSettings _settings;
+        private readonly SymmetricSecurityKey _key;
 
-    public async Task<AggregatedResult> FetchAndAggregateAsync(
-        List<Filter>? filters,
-        List<Sort>? sorts)
-    {
-        // Prepare criteria once
-        /*   var filterCriteria = FilterSortMapper.ToFilterCriteria(filters);
-           var sortCriteria = FilterSortMapper.ToSortCriteria(sorts);
-   */
-        // Fetch all endpoints in parallel
-        var allResults = new Dictionary<string, JsonElement[]>();
-        var totalStopwatch = Stopwatch.StartNew();
-    var fetchTasks = _settings
-    .Select(kvp =>
-    {
-        var name    = kvp.Key;
-        var cfg     = kvp.Value;
-        // you said each cfg.Query already has your  query-string?
-        var query   = cfg.Query;
-
-        // e.g. your FetchAsync signature might be:
-        // Task<JsonElement[]> FetchAsync(string clientName, string relativeUri, …)
-        return _fetcher.FetchAsync(name, cfg, filters ,sorts);
-    });
-
-        var endpointResults = await Task.WhenAll(fetchTasks);
-        totalStopwatch.Stop();
-
-        // Record total aggregation time
-        //_fetcher._stats.Record("AggregationService.Total", totalStopwatch.ElapsedMilliseconds);
-
-
-        var results = await Task.WhenAll(fetchTasks);
-        foreach (var dict in results)
+        public JwtTokenService(IOptions<JwtSettings> opts)
         {
-            foreach (var kvp in dict)
-            {
-                allResults[kvp.Key] = kvp.Value;
-            }
+            _settings = opts.Value;
+            _key = new SymmetricSecurityKey(Convert.FromBase64String(_settings.Key));
         }
 
-        return new AggregatedResult { ResultsByApi = allResults };
-     //   return new AggregatedResult { Items = allItems };
+        public string CreateToken(string userId, IEnumerable<string> roles)
+        {
+            var creds = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
+            var claims = new List<Claim>
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, userId),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim("scope", _settings.Scope)
+            };
+            claims.AddRange(roles.Select(r => new Claim(ClaimTypes.Role, r)));
+
+            var token = new JwtSecurityToken(
+                issuer: _settings.Issuer,
+                audience: _settings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_settings.ExpireMinutes),
+                signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
     }
 }
-

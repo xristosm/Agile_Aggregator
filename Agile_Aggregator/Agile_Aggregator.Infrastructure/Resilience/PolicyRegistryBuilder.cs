@@ -1,5 +1,9 @@
-﻿using Polly;
+﻿// File: Infrastructure/Resilience/PolicyRegistryBuilder.cs
+using Polly;
+using Polly.Extensions.Http;
 using Polly.Registry;
+using System;
+using System.Net.Http;
 
 namespace Agile_Aggregator.Infrastructure.Resilience
 {
@@ -8,27 +12,29 @@ namespace Agile_Aggregator.Infrastructure.Resilience
         public static PolicyRegistry Build()
         {
             var registry = new PolicyRegistry();
-            var retry = Policy.Handle<HttpRequestException>()
-                              .WaitAndRetryAsync(3, r => TimeSpan.FromSeconds(Math.Pow(2, r)));
-            registry.Add("RetryPolicy", retry);
+
+            // Retry policy for HttpResponseMessage
+            IAsyncPolicy<HttpResponseMessage> retryPolicy =
+                HttpPolicyExtensions
+                    .HandleTransientHttpError()
+                    .WaitAndRetryAsync(
+                        3,
+                        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))
+                    );
+
+            // Circuit-breaker for HttpResponseMessage
+            IAsyncPolicy<HttpResponseMessage> circuitBreakerPolicy =
+                HttpPolicyExtensions
+                    .HandleTransientHttpError()
+                    .CircuitBreakerAsync(
+                        handledEventsAllowedBeforeBreaking: 2,
+                        durationOfBreak: TimeSpan.FromSeconds(30)
+                    );
+
+            registry.Add("RetryPolicy", retryPolicy);
+            registry.Add("CircuitBreakerPolicy", circuitBreakerPolicy);
+
             return registry;
         }
     }
 }
-/*using Polly;
-using Polly.Extensions.Http;
-
-public static class PolicyRegistryBuilder
-{
-    public static IAsyncPolicy<HttpResponseMessage> WeatherPolicy =>
-        HttpPolicyExtensions
-            .HandleTransientHttpError()
-            .OrResult(r => r.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-            .WaitAndRetryAsync(3, retry => TimeSpan.FromSeconds(Math.Pow(2, retry)));
-
-    public static IAsyncPolicy<HttpResponseMessage> NewsPolicy =>
-        HttpPolicyExtensions
-            .HandleTransientHttpError()
-            .CircuitBreakerAsync(2, TimeSpan.FromSeconds(30));
-}
-*/

@@ -4,7 +4,7 @@ namespace Agile_Aggregator.Domain.Interfaces
 {
     public interface IStatsService
     {
-        void Record(string apiName, long elapsedMs);
-        IEnumerable<RequestStats> GetAllStats();
+
+        IEnumerable<ApiBucketStats> GetAllStats();
     }
 }

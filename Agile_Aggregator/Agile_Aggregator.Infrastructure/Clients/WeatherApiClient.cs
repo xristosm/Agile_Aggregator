@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+﻿/*using System.Text.Json;
 using Agile_Aggregator.Domain.Filtering;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
@@ -15,7 +15,7 @@ namespace Agile_Aggregator.Infrastructure.Clients
 
         public async Task<ApiResponse<IEnumerable<JsonElement>>> FetchAsync(string query)
         {
-            /*string query = $"q={Uri.EscapeDataString("athens")}";
+            *//*string query = $"q={Uri.EscapeDataString("athens")}";
             if (filter.Latitude.HasValue && filter.Longitude.HasValue)
             {
                 query = $"lat={filter.Latitude.Value}&lon={filter.Longitude.Value}";
@@ -29,7 +29,7 @@ namespace Agile_Aggregator.Infrastructure.Clients
             {
                 query = $"q={Uri.EscapeDataString(filter.City!)}";
             }
-  */
+  *//*
 
 
             // 2️⃣ Build full URI
@@ -39,3 +39,4 @@ namespace Agile_Aggregator.Infrastructure.Clients
         }
     }
 }
+*/
