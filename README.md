@@ -201,36 +201,5 @@ app.UseAuthorization();
 app.MapControllers();
 ```
 
-Enable XML doc generation in `.csproj`:
-
-```xml
-<PropertyGroup>
-  <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  <NoWarn>$(NoWarn);1591</NoWarn>
-</PropertyGroup>
-```
-
----
-
-## Unit Testing
-
-- Tests written with **xUnit** and **Moq**.
-- Run all tests:
-  ```bash
-  dotnet test --no-build
-  ```
-
----
-
-## Contributing
-
-1. Fork the repo
-2. Create a branch: `git checkout -b feature/YourFeature`
-3. Commit: `git commit -m "Add feature"`
-4. Push: `git push origin feature/YourFeature`
-5. Open a PR for review
-
----
-
 
 
