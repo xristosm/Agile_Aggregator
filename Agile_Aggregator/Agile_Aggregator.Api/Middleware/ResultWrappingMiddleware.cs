@@ -42,7 +42,7 @@ namespace Agile_Aggregator.Api.Middleware
             {
                 context.Response.Body = originalBody;
                 context.Response.StatusCode = 500;
-                var payload = new { IsSuccess = false, ErrorCode = "UnhandledException", ErrorDetail = ex.Message };
+                var payload = new { IsSuccess = false, ErrorCode = "UnhandledException" };
                 await context.Response.WriteAsJsonAsync(payload);
             }
         }

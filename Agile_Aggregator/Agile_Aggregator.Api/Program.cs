@@ -3,7 +3,7 @@
 using System.Net.Http.Headers;
 using Agile_Aggregator.Api.BackgroundServices;
 using Agile_Aggregator.Api.Extensions;
-
+using Agile_Aggregator.Api.Middleware;
 using Agile_Aggregator.API.Extensions;
 using Agile_Aggregator.Application.Factories;
 using Agile_Aggregator.Application.QueryStrategies;
@@ -86,10 +86,12 @@ builder.Services.AddTransient<Func<string, IQueryBuilder>>(sp => key =>
     {
         "Weather" => sp.GetRequiredService<WeatherQueryBuilder>(),
         "NewsApi" => sp.GetRequiredService<NewsQueryBuilder>(),
+        "Github" => sp.GetRequiredService<UnspesifiedQueryBuilder>(),
         _ => sp.GetRequiredService<UnspesifiedQueryBuilder>(),
     };
 });
 var app = builder.Build();
+//app.UseMiddleware<CacheLookupMiddleware>();
 
 // Configure middleware
 app.UseSwagger();
