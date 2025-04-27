@@ -1,90 +1,158 @@
-# Agile Aggregator API
+Agile Aggregator API
 
-## Overview
+Overview
 
-`Agile Aggregator` is a .NET 8 Web API that aggregates data from multiple external REST APIs, applies filtering and sorting, and exposes unified results to clients.
+Agile Aggregator is a .NET 8 Web API that fetches, filters, sorts, and unifies data from multiple external REST APIs into a single aggregated response.
 
-## Prerequisites
+It provides:
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- Access to configured external APIs (keys and endpoints)
-- Optional: Docker (for containerized deployment)
+Authentication via POST /api/auth/login (use username=admin, password=password).
 
-## Setup & Configuration
+Aggregation via GET /api/aggregate with dynamic filtering and sorting.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/<your‑org>/Agile_Aggregator.git
-   cd Agile_Aggregator/Agile_Aggregator.Api
-   ```
-2. **Restore dependencies**:
-   ```bash
-   dotnet restore
-   ```
-3. **Configure API settings**:
-   - Open `appsettings.json` (and `appsettings.Development.json` for local/dev).
-   - Under `ApiSettings:Keys`, define your API names, URLs, and credentials:
-     ```json
-     "ApiSettings": {
-       "Keys": ["ServiceA", "ServiceB"],
-       "ServiceA": {
-         "BaseUrl": "https://api.servicea.com/v1/data",
-         "ApiKey": "<YOUR_KEY>"
-       },
-       "ServiceB": { ... }
-     }
-     ```
-4. **Run the application**:
-   ```bash
-   dotnet run --project Agile_Aggregator.Api
-   ```
+Statistics via GET /api/statistics to view runtime metrics and fetch performance.
 
-## API Endpoints
+Prerequisites
 
-### `GET /api/aggregate`
+.NET 8 SDK
 
-Aggregates data from all configured external APIs.
+Valid external API keys/endpoints configured in appsettings.json
 
-- **Query parameters** (all optional):
+Optional: Docker for containerization
 
-  - `country` (string)
-  - `datetime>=YYYY-MM-DD` (date filter)
-  - `date=asc|desc` (sort order)
+Setup & Configuration
 
-- **Response** `200 OK`
+Clone the repository
 
-  ```json
-  {
+git clone https://github.com/<org>/Agile_Aggregator.git
+cd Agile_Aggregator/Agile_Aggregator.Api
+
+Restore dependencies
+
+dotnet restore
+
+Configure API settings
+
+Add any number of external APIs under the ApiSettings section in appsettings.json. Example:
+
+"ApiSettings": {
+  "Weather": {
+    "BaseUrl": "https://api.openweathermap.org",
+    "ApiKey": "027cc235754c563ba5e78056c45657d9",
+    "Query": "/data/2.5/weather?q=athens&appid=027cc235754c563ba5e78056c45657d9"
+  },
+  "NewsApi": {
+    "BaseUrl": "https://newsapi.org",
+    "ApiKey": "594fc9d848a04f59b1a55ce3ace21071",
+    "Query": "/v2/top-headlines?country=us",
+    "UserAgent": "MyApp/1.0"
+  },
+  "Github": {
+    "BaseUrl": "https://api.github.com",
+    "UserAgent": "MyApp/1.0",
+    "Query": "/repos/dotnet/runtime"
+  }
+}
+
+Run the application
+
+dotnet run --project Agile_Aggregator.Api
+
+Authentication
+
+POST /api/auth/login
+
+Logs in with credentials and returns a JWT bearer token.
+
+Request Body (JSON):
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+Response 200 OK:
+
+{
+  "token": "<JWT_TOKEN>"
+}
+
+Include Authorization: Bearer <JWT_TOKEN> on subsequent calls.
+
+API Endpoints
+
+GET /api/aggregate
+
+Fetches and merges data from all configured external APIs. For each API name (as defined in ApiSettings), calls the external endpoint, applies any filters/sorts, and returns per-API results wrapped in a standard Result<T>.
+
+Query Parameters (optional, can repeat):
+
+Filters: name=value (e.g. country=us)
+
+Sorts: sort=asc or sort=desc
+
+The service parses these parameters and attempts to map them into each API’s own query schema before aggregation.
+
+Response 200 OK:
+
+{
+  "isSuccess": true,
+  "data": {
     "resultsByApi": {
-      "ServiceA": [ { /* item 1 */ }, { /* item 2 */ }, ... ],
-      "ServiceB": [ ... ]
+      "Weather": [ /* weather JSON elements */ ],
+      "NewsApi": [ /* news items */ ],
+      "Github": [ /* repo info JSON */ ]
     }
   }
-  ```
+}
 
-## Error Handling & Resilience
+Result Wrapper:
 
-- Transient failures are handled via **Polly** policies (retry, circuit breaker).
-- On persistent failure, a **fallback** returns an empty dataset for the affected API and logs the error.
-- All unhandled exceptions are wrapped by `Result<T>` and surface meaningful error codes/messages.
+public class Result<T> {
+  public bool IsSuccess { get; }
+  public T? Data { get; }
+  public string? ErrorCode { get; }
+  public string? ErrorDetail { get; }
+  // static methods Success(T) and Failure(code, detail)
+}
 
-## Unit Testing
+GET /api/statistics
 
-- Uses **xUnit** and **Moq** for testing service logic and failure scenarios.
-- To run all tests:
-  ```bash
-  dotnet test --no-build
-  ```
+Returns performance metrics for each configured API fetch, including counts of fast/average/slow responses and overall averages.
 
-## Contribution
+Response 200 OK:
 
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'Add feature'`)
-4. Push to your branch (`git push origin feature/YourFeature`)
-5. Open a Pull Request
+[
+  {
+    "apiName": "Weather",
+    "fastCount": 10,
+    "averageCount": 5,
+    "slowCount": 2,
+    "overallAvgMs": 180.5
+  },
+  {
+    "apiName": "NewsApi",
+    "fastCount": 8,
+    "averageCount": 6,
+    "slowCount": 1,
+    "overallAvgMs": 200.0
+  }
+]
 
-## License
+Backing model:
 
-This project is licensed under the MIT License. Please see [LICENSE](LICENSE) for details.
+public class ApiStats {
+  public string ApiName { get; set; } = string.Empty;
+  public int FastCount { get; set; }
+  public int AverageCount { get; set; }
+  public int SlowCount { get; set; }
+  public double OverallAvgMs { get; set; }
+}
 
+Error Handling & Resilience
+
+Uses Polly for retries and circuit breakers on transient HTTP failures.
+
+On sustained failures, the aggregate result contains a failed Result<T> for that API with error codes (HttpError, ParseError, etc.).
+
+Successful responses for each API are cached (default TTL = 5 minutes).
