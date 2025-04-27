@@ -109,7 +109,7 @@ namespace Agile_Aggregator.Api.BackgroundServices
                 "SPIKE: {Api} 5-min avg {Recent:F0}ms > baseline avg {Baseline:F0}ms × {Mul}",
                 kv.Key, recentAvg, baselineAvg, ThresholdMultiplier);
         }
-    }
+  }
 
     return Task.CompletedTask;
 }

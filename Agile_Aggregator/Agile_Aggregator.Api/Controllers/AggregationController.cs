@@ -1,3 +1,4 @@
+using Agile_Aggregator.Api.Extensions;
 using Agile_Aggregator.Domain.Filtering;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
@@ -15,8 +16,13 @@ namespace Agile_Aggregator.API.Controllers
         public AggregationController(IAggregationService aggregator) => _aggregator = aggregator;
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] List<Filter>? filters,[FromQuery] List<Sort>? sorts)
+        public async Task<IActionResult> Get()
         {
+            // e.g. Request.QueryString.Value == "?country=s&datetime>=2021-11-01&date=asc"
+            Request.QueryString.Value!.ParseFiltersAndSorts(out var filters, out var sorts);
+
+            //var result = await _aggregator.FetchAndAggregateAsync(filters, sorts);
+
             var result = await _aggregator.FetchAndAggregateAsync(filters,sorts);
             return Ok(result);
         }

@@ -1,5 +1,7 @@
-﻿using Agile_Aggregator.Domain.Models;
+﻿using Agile_Aggregator.Domain.Filtering;
+using Agile_Aggregator.Domain.Models;
 using Agile_Aggregator.Infrastructure.Resilience;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
@@ -40,24 +42,95 @@ namespace Agile_Aggregator.Api.Extensions
                         client.DefaultRequestHeaders.UserAgent.ParseAdd(ep.UserAgent);
                 })
                 .AddPolicyHandlerFromRegistry("RetryPolicy")
-                .AddPolicyHandlerFromRegistry("CircuitBreakerPolicy")
-                .AddPolicyHandler(
+                .AddPolicyHandlerFromRegistry("CircuitBreakerPolicy");
+                 /*    .AddPolicyHandler(
                     Policy<HttpResponseMessage>
                         .HandleResult(r => !r.IsSuccessStatusCode)
-                        .FallbackAsync(
+                   .FallbackAsync(
                             fallbackAction: (_, __) => Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
                             {
-                                Content = new StringContent("\"CACHE_FALLBACK\"")
+                                Content = new StringContent("no Data Could be Colected")
                             }),
                             onFallbackAsync: (_, __) => Task.CompletedTask
-                        )
-                );
+                      
+                );  )*/
             }
 
             return services;
         }
     }
+    public static class QueryParsingExtensions
+    {
+        // list of supported filter operators
+        private static readonly string[] _operators = new[] { ">=", "<=", "!=", ">", "<" };
+
+        /// <summary>
+        /// Parses a raw query string (e.g. "?country=s&datetime>=2021-11-01&date=asc")
+        /// into a list of Filters and a list of Sorts.
+        /// </summary>
+        public static void ParseFiltersAndSorts(
+            this string? rawQueryString,
+            out List<Filter> filters,
+            out List<Sort> sorts)
+        {
+            filters = new List<Filter>();
+            sorts = new List<Sort>();
+
+            if (string.IsNullOrWhiteSpace(rawQueryString))
+                return;
+
+            // strip leading '?' if present
+            var qs = rawQueryString.StartsWith("?", StringComparison.Ordinal)
+                ? rawQueryString[1..]
+                : rawQueryString;
+
+            // parse into key -> StringValues
+            var dict = QueryHelpers.ParseQuery(qs);
+
+            foreach (var kv in dict)
+            {
+                var key = kv.Key;
+                var values = kv.Value;
+                foreach (var rawVal in values)
+                {
+                    // if value is "asc" or "desc", treat as a sort
+                    if (string.Equals(rawVal, "asc", StringComparison.OrdinalIgnoreCase) ||
+                        string.Equals(rawVal, "desc", StringComparison.OrdinalIgnoreCase))
+                    {
+                        sorts.Add(new Sort
+                        {
+                            PropertyName = key,
+                            Descending = rawVal.Equals("desc", StringComparison.OrdinalIgnoreCase)
+                        });
+                        continue;
+                    }
+
+                    // otherwise, parse as a filter: look for operator in key
+                    var op = "=";
+                    var name = key;
+                    foreach (var symbol in _operators)
+                    {
+                        var idx = key.IndexOf(symbol, StringComparison.Ordinal);
+                        if (idx >= 0)
+                        {
+                            name = key[..idx];
+                            op = symbol;
+                            break;
+                        }
+                    }
+
+                    filters.Add(new Filter
+                    {
+                        PropertyName = name,
+                        Operator = op,
+                        Value = rawVal
+                    });
+                }
+            }
+        }
+    }
 }
+
 /*
 using Polly.Extensions.Http;
 using Polly;

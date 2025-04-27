@@ -6,6 +6,7 @@ using Agile_Aggregator.Api.Extensions;
 
 using Agile_Aggregator.API.Extensions;
 using Agile_Aggregator.Application.Factories;
+using Agile_Aggregator.Application.QueryStrategies;
 using Agile_Aggregator.Application.Services;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
@@ -14,6 +15,7 @@ using Agile_Aggregator.Infrastructure.Stores;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using static Agile_Aggregator.Application.QueryStrategies.DefaultQueryBuilder;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -72,10 +74,21 @@ builder.Services.AddExternalApis(builder.Configuration);
 
 builder.Services.AddPolicyRegistry(PolicyRegistryBuilder.Build());
 
-/*// optional JWT
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options => {*//* configure issuer, key, etc. *//*});*/
+builder.Services.AddSingleton<UnspesifiedQueryBuilder>();
+builder.Services.AddSingleton<WeatherQueryBuilder>();
+builder.Services.AddSingleton<NewsQueryBuilder>();
+// ...etc
 
+// If you need one-per-client:
+builder.Services.AddTransient<Func<string, IQueryBuilder>>(sp => key =>
+{
+    return key switch
+    {
+        "Weather" => sp.GetRequiredService<WeatherQueryBuilder>(),
+        "NewsApi" => sp.GetRequiredService<NewsQueryBuilder>(),
+        _ => sp.GetRequiredService<UnspesifiedQueryBuilder>(),
+    };
+});
 var app = builder.Build();
 
 // Configure middleware

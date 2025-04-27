@@ -7,6 +7,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Agile_Aggregator.Application.QueryStrategies;
 using Agile_Aggregator.Domain.Filtering;
 using Agile_Aggregator.Domain.Interfaces;
 using Agile_Aggregator.Domain.Models;
@@ -23,18 +24,19 @@ namespace Agile_Aggregator.Application.Services
         private readonly InMemoryStatsStore _store;
         private static readonly TimeSpan CacheTtl = TimeSpan.FromMinutes(5);
         public event EventHandler<ApiFetchEventArgs>? FetchCompleted;
-
+        private readonly Func<string, IQueryBuilder> _builderFactory;
 
         public EndpointFetcher(
                 IHttpClientFactory httpFactory,
                 ICacheService cache,
-                InMemoryStatsStore store
+                InMemoryStatsStore store,
+                      Func<string, IQueryBuilder> builderFactory
              )
         {
             _store = store;
             _httpFactory = httpFactory;
             _cache = cache;
-
+            _builderFactory = builderFactory;
         }
         public async Task<Result<JsonElement[]>> FetchWithResultAsync(
     string name,
@@ -43,7 +45,10 @@ namespace Agile_Aggregator.Application.Services
     IReadOnlyCollection<Sort> sorts)
         {
             var stopwatch = Stopwatch.StartNew();
-            var cacheKey = $"{name}:{endpointSettings.Query}";
+               
+            var qb = _builderFactory(name);
+            var path = qb.Build(endpointSettings.Query, filters, sorts);
+            var cacheKey = $"{name}:{path}";
             bool fromCache = true;
             try
             {
@@ -51,6 +56,7 @@ namespace Agile_Aggregator.Application.Services
                     cacheKey,
                     name,
                     endpointSettings,
+                    path,
                     CacheTtl,
                     () => fromCache = false);
 
@@ -77,6 +83,7 @@ namespace Agile_Aggregator.Application.Services
             string cacheKey,
             string clientName,
             EndpointSettings endpointSettings,
+                     string query,
             TimeSpan cacheDuration,
             Action markNotFromCache)
         {
@@ -85,7 +92,7 @@ namespace Agile_Aggregator.Application.Services
                 async () =>
                 {
                     markNotFromCache();
-                    return await FetchFromHttpAsync(clientName, endpointSettings.Query);
+                    return await FetchFromHttpAsync(clientName, query);
                 },
                 cacheDuration);
         }
