@@ -15,7 +15,7 @@ public class AuthController : ControllerBase
 
     /// <summary>
     /// POST /api/auth/login
-    /// Body: { "userName": "admin", "password": "P@ssw0rd" }
+    /// Body: { "userName": "admin", "password": "Password" }
     /// Returns: { "token": "{JWT…}" }
     /// </summary>
     [HttpPost("login")]

@@ -56,7 +56,10 @@ builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSet
 builder.Services.AddMemoryCache();
 builder.Services.AddSingleton<InMemoryStatsStore>();
 builder.Services.AddTransient<ICacheService, CacheService>();
-builder.Services.AddSingleton<IEndpointFetcher, EndpointFetcher>();
+/*builder.Services.AddTransient<ClientEndpointFetcher>();
+builder.Services.AddTransient<CachingEndpointFetcher>();
+builder.Services.AddTransient<IEndpointFetcherFactory, EndpointFetcherFactory>();*/
+builder.Services.AddTransient<IEndpointFetcher, EndpointFetcher>(); 
 builder.Services.AddSingleton<IStatsService, StatsService>();
 builder.Services.AddTransient<IAggregationService, AggregationService>();
 
